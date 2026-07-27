@@ -41,8 +41,8 @@
 
 <link rel="preload" href="/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-{{ $style := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint "sha256" }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ $style := resources.Get "css/style.css" | resources.Minify }}
+<style>{{ $style.Content | safeCSS }}</style>
 </head>
 <body>
 {{ block "main" . }}{{ end }}

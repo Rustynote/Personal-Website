@@ -29,7 +29,7 @@
 		<div class="stack-group">
 			<div class="stack-label">Engineering</div>
 			<div class="tags">
-				{{ range .Site.Data.stack.engineering }}
+				{{ range hugo.Data.stack.engineering }}
 				<div class="tag{{ if .on }} on{{ end }}">{{ .name }}</div>
 				{{ end }}
 			</div>
@@ -38,7 +38,7 @@
 		<div class="stack-group">
 			<div class="stack-label">Architecture &amp; Leadership</div>
 			<div class="tags">
-				{{ range .Site.Data.stack.leadership }}
+				{{ range hugo.Data.stack.leadership }}
 				<div class="tag">{{ .name }}</div>
 				{{ end }}
 			</div>
@@ -50,7 +50,7 @@
 			<div class="sec-line"></div>
 		</div>
 
-		{{ range .Site.Data.experience }}
+		{{ range hugo.Data.experience }}
 		<div class="exp-item">
 			<div class="exp-date">{{ .date }}</div>
 			<div>
@@ -73,7 +73,7 @@
 			<div class="sec-line"></div>
 		</div>
 		<div class="proj-grid">
-			{{ range .Site.Data.projects }}
+			{{ range hugo.Data.projects }}
 			<a class="proj-card" href="{{ .url }}" target="_blank" rel="noopener {{ .rel }}">
 				<div class="proj-main">
 					<div class="proj-name">{{ .name }}</div>
