@@ -1,7 +1,6 @@
 baseURL = "https://wparcanum.com/"
 languageCode = "en-us"
 title = "Jaroslav Suhanek — Solutions Architect"
-theme = ""
 
 [params]
   name = "Jaroslav Suhanek"
