@@ -1,6 +1,8 @@
 baseURL = "https://wparcanum.com/"
 languageCode = "en-us"
 title = "Jaroslav Suhanek — Solutions Architect"
+disableKinds = ["taxonomy", "term", "RSS"]
+disableHugoGeneratorInject = true
 
 [params]
   name = "Jaroslav Suhanek"

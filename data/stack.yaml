@@ -1,12 +1,12 @@
 engineering:
   - name: "PHP"
-    on: true
+    "on": true
   - name: "WordPress"
-    on: true
+    "on": true
   - name: "Python"
-    on: true
+    "on": true
   - name: "Django"
-    on: true
+    "on": true
   - name: "React"
   - name: "Svelte"
   - name: "MySQL"
