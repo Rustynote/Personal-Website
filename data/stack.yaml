@@ -1,0 +1,24 @@
+engineering:
+  - name: "PHP"
+    on: true
+  - name: "WordPress"
+    on: true
+  - name: "Python"
+    on: true
+  - name: "Django"
+    on: true
+  - name: "React"
+  - name: "Svelte"
+  - name: "MySQL"
+  - name: "REST APIs"
+  - name: "GraphQL"
+  - name: "UI/UX"
+leadership:
+  - name: "Software Architecture"
+  - name: "Solution Architecture"
+  - name: "Systems Design"
+  - name: "Technical Leadership"
+  - name: "Team Management"
+  - name: "Engineering Mentorship"
+  - name: "Code Review"
+  - name: "SaaS"

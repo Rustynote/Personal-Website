@@ -1,0 +1,13 @@
+- name: "dailytodo.work"
+  url: "https://dailytodo.work/"
+  desc: "A fast, offline todo calendar — no backend, no account, no tracking. Built with SvelteKit, runs entirely in the browser."
+  tags: ["#SVELTE", "#PWA", "#LIVE"]
+- name: "peronal website"
+  url: "https://github.com/Rustynote/Personal-Website"
+  desc: "This site — a terminal-inspired personal site built with Hugo and deployed to GitHub Pages via GitHub Actions."
+  tags: ["#HUGO", "#META"]
+  rel: "nofollow"
+- name: "checkoutpro.net"
+  url: "https://checkoutpro.net/"
+  desc: "Social proof and urgency tools for checkout pages — exit-intent popups, countdown timers, testimonials."
+  tags: ["#PRODUCT", "#DEVELOPMENT"]

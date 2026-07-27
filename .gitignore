@@ -1,0 +1,19 @@
+# Hugo build output (compiled HTML/CSS)
+/public/
+
+# Hugo temporary and cache files
+/resources/_gen/
+/.hugo_build.lock
+
+# Node dependencies (if using Tailwind, PostCSS, or npm packages)
+/node_modules/
+/assets/jsconfig.json
+
+# Hugo build statistics file (if optimizing styles like Tailwind)
+hugo_stats.json
+
+# Local OS & IDE specific exclusions
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

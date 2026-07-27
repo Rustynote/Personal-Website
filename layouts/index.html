@@ -1,0 +1,105 @@
+{{ define "main" }}
+<div class="wrap">
+
+	<div class="term">
+		<div class="term-bar">
+			<div class="dot r"></div>
+			<div class="dot y"></div>
+			<div class="dot g"></div>
+			<div class="term-title">jaroslav@wparcanum: ~</div>
+		</div>
+		<div class="term-body">
+			<div class="prompt"><span>visitor@web:~$</span> whoami</div>
+			<h1>{{ .Site.Params.name }}<span class="cursor"></span></h1>
+			<div class="role">{{ .Site.Params.tagline | safeHTML }}</div>
+			<div class="desc">{{ .Params.about }}</div>
+			<div class="btn-row">
+				<a class="btn primary" href="#contact">$ get-in-touch</a>
+				<a class="btn" href="#projects">$ view-projects</a>
+				<a class="btn" href="{{ .Site.Params.linkedin }}" target="_blank" rel="nofollow noopener">$ download-resume</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Stack</span>
+			<div class="sec-line"></div>
+		</div>
+
+		<div class="stack-group">
+			<div class="stack-label">Engineering</div>
+			<div class="tags">
+				{{ range .Site.Data.stack.engineering }}
+				<div class="tag{{ if .on }} on{{ end }}">{{ .name }}</div>
+				{{ end }}
+			</div>
+		</div>
+
+		<div class="stack-group">
+			<div class="stack-label">Architecture &amp; Leadership</div>
+			<div class="tags">
+				{{ range .Site.Data.stack.leadership }}
+				<div class="tag">{{ .name }}</div>
+				{{ end }}
+			</div>
+		</div>
+	</div>
+
+	<div class="section" id="experience">
+		<div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Experience</span>
+			<div class="sec-line"></div>
+		</div>
+
+		{{ range .Site.Data.experience }}
+		<div class="exp-item">
+			<div class="exp-date">{{ .date }}</div>
+			<div>
+				<div class="exp-role">{{ .role }} <span class="co">@ {{ .company }}</span></div>
+				<div class="exp-desc">{{ .desc }}</div>
+				{{ with .bullets }}
+				<ul class="exp-bullets">
+					{{ range . }}
+					<li>{{ . }}</li>
+					{{ end }}
+				</ul>
+				{{ end }}
+			</div>
+		</div>
+		{{ end }}
+	</div>
+
+	<div class="section" id="projects">
+		<div class="sec-head"><span class="sec-num">03</span><span class="sec-title">Projects</span>
+			<div class="sec-line"></div>
+		</div>
+		<div class="proj-grid">
+			{{ range .Site.Data.projects }}
+			<a class="proj-card" href="{{ .url }}" target="_blank" rel="noopener {{ .rel }}">
+				<div class="proj-main">
+					<div class="proj-name">{{ .name }}</div>
+					<div class="proj-desc">{{ .desc }}</div>
+				</div>
+				<div class="proj-tags">{{ range .tags }}<span>{{ . }}</span>{{ end }}</div>
+			</a>
+			{{ end }}
+		</div>
+		<div class="proj-more"><a href="{{ .Site.Params.github }}" target="_blank" rel="noopener">$ view-more-on-github →</a></div>
+	</div>
+
+	<div class="section" id="contact">
+		<div class="sec-head"><span class="sec-num">04</span><span class="sec-title">Contact</span>
+			<div class="sec-line"></div>
+		</div>
+		<div class="contact-box">
+			<p>Always open for new discussions — a potential project, or just to say hi.</p>
+			<div class="email-line">{{ .Site.Params.email }}</div>
+			<div class="social-row">
+				<a href="{{ .Site.Params.github }}" target="_blank" rel="nofollow noopener">GitHub</a>
+				<a href="{{ .Site.Params.linkedin }}" target="_blank" rel="nofollow noopener">LinkedIn</a>
+			</div>
+		</div>
+	</div>
+
+	<footer>&copy; {{ now.Year }} {{ .Site.Params.name }} — built from scratch, no template</footer>
+</div>
+{{ end }}

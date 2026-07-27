@@ -1,3 +1,15 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = "https://wparcanum.com/"
+languageCode = "en-us"
+title = "Jaroslav Suhanek — Solutions Architect"
+theme = ""
+
+[params]
+  name = "Jaroslav Suhanek"
+  tagline = "Solutions Architecture · <b>Systems that scale</b>"
+  description = "Solutions Architect and Co-Founder at OmniStreak. Custom WordPress, PHP, and full-stack engineering since 2006."
+  email = "jaroslav@wparcanum.com"
+  github = "https://github.com/Rustynote"
+  linkedin = "https://www.linkedin.com/in/jaroslavsuhanek/"
+
+[markup.goldmark.renderer]
+  unsafe = true
