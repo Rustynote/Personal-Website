@@ -169,4 +169,4 @@ h1 .cursor{ display:inline-block; width:10px; height:36px; background:var(--acce
 .social-row a{ color:var(--dim); font-family:'JetBrains Mono',monospace; font-size:13px; text-decoration:none; border-bottom:1px dotted var(--border); }
 .social-row a:hover{ color:var(--accent); }
 
-footer{ text-align:center; color:#565c62; font-size:12px; margin-top:70px; font-family:'JetBrains Mono',monospace; }
+footer{ text-align:center; color:var(--dim); font-size:12px; margin-top:70px; font-family:'JetBrains Mono',monospace; }
